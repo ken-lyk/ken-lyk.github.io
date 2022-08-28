@@ -1,4 +1,4 @@
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
         Testing on the CI/CD for React project
       </h1>
       
-      {/* <header className="App-header">
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -21,7 +21,7 @@ function App() {
         >
           Testing on the CI/CD for React project
         </a>
-      </header> */}
+      </header>
     </div>
   );
 }
