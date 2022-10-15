@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
           <h1>Welcome to React Router!</h1>
-      <Routes>
+      <Routes> 
+        <Route path="/about" element={<About />} />
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<About />} />
       </Routes>
     </div>
   );
