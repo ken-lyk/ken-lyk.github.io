@@ -7,7 +7,7 @@ function App() {
       <h1>
         Testing on the CI/CD for React project
         <br/>
-        WIP - Ken
+        WIP - Ken 3d
       </h1>
       
       <header className="App-header">
