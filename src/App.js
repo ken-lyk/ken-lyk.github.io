@@ -1,21 +1,45 @@
-import './App.css'; 
+import './App.css';
 import React, { Component } from 'react'
 import Home from './Pages/Home';
 import About from './Pages/About';
-import NavigationBar from './NavigationBar';
+import NavigationBar, { NavigationBarType } from './NavigationBar';
 
 export default class App extends Component {
-    render() {
-      return (
-        <div className="App">
-          <NavigationBar />
-          <h1 className="text-5xl font-bold text-slate-500">
-          Hello world!
-        </h1>
-          
-          <Home/>
-          <About/>
-        </div>
-      );
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedNavigationType: undefined,
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <NavigationBar
+          onClick={(item) => {
+            this.setState({ selectedNavigationType: item })
+          }} /> 
+          {this.getSelectedPage()}
+      </div>
+    );
+  }
+
+  getSelectedPage() {
+    var type = this.state.selectedNavigationType
+
+    if (type === undefined) {
+      return <></>
     }
+    switch (type) {
+      case NavigationBarType.Home:
+        return <Home />
+      case NavigationBarType.About:
+        return <About /> 
+      default:
+        return <div>
+          {type}
+        </div>;
+    }
+  }
 }
