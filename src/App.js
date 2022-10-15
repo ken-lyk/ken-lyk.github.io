@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './Home';
+import About from './About';
 
 function App() {
   return (
@@ -10,9 +12,8 @@ function App() {
         WIP - Ken 3d
       </h1>
       
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+      <Home/>
+      <About/>
     </div>
   );
 }
